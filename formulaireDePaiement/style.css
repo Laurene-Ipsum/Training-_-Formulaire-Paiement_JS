@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: auto;
+}
+body {
+    background: url(vinyl-bg.jpg);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+    height: auto;
+    margin-top: 50px;
+    background-color: rgba(24, 25, 21, 0.578);
+    padding: 90px;
+}
+
+.intitule {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    padding: 3px;
+    color: azure;
+}
+#newsletter {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: azure;
+}
+
+.imgPaie {
+    width: 350px;
+    margin-top: 40px;
+    }
+
+.buttonsubmit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.buttonsubmit:hover {
+    background-color: rgb(43, 87, 132); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.container {
+
+
+    display: flex;
+
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+ 
+    flex-flow: row nowrap;
+    flex-flow: column wrap;
+
+    justify-content: flex-start;
+
+}

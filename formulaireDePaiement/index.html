@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Paiement</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.7.3/themes/base/jquery-ui.css">
+</head>
+<body>
+<!--------------------------------------------------------------
+Détail du Mini-Projet #4 : 
+Tout(e) seul(e), vous allez devoir créer un formulaire de paiement (sans la partie paiement, bien-sur).
+Ce formulaire devra contenir : 
+- Prénom
+- Nom 
+- Date de naissance
+- Adresse email valide (regex)
+- Adresse de livraison :
+   - CP + Ville valide (API, ajax, etc)
+   - N° de rue + rue 
+- Inscription à la newletter (case à cocher)
+- Un bouton de validation
+Tous les champs doivent être validé par vos soins ainsi que logique (pas de nombres dans un prénom...).
+Les champs qui ne sont pas correctes lors d'un click sur le bouton de validation doivent devenir rouge et signaler l'erreur à l'utilisateur.
+Si tous les champs sont validés, alors, une alerte contenant toutes les informations du formulaires s'ouvrira !
+--------------------------------------------------------------->
+    <!--Formulaire de Paiement-->
+    <form onsubmit="return verifForm(this)">
+      <!--action="page.php"-->
+           
+      <label class="intitule">Prénom</label>
+     <input type="text" name="prenom" placeholder="Tape ici ton prénom" onblur="verifPrenom(this)">
+     <br/>  
+     <label class="intitule">Nom </label>
+     <input type="text" name="nomUser" placeholder="Tape ici ton nom" onblur="verifNomUser(this)">
+     <br/> 
+     <label class="intitule">Date de naissance </label>
+     <input type="date" name="birth" placeholder="JJ/MM/YY" required> <br/>
+    <label class="intitule">Adresse Mail</label><input type="text" name="email" size="30" placeholder="tonadresse@mail.com" onblur="verifMail(this)"><br/>
+     
+     <!-- ADRESSE -->
+     <label class="intitule">Adresse</label>
+<input name="cp" id="cp" type="text" placeholder="CP" required>
+<input name="ville" id="ville" type="text" placeholder="Ville"required>
+<input name="adresse" id="adresse" type="text" placeholder="Adresse"required>
+<br>
+  <!-- Newsletter -->
+  <label id="newsletter" for="subscribeNews"> Souhaitez-vous vous abonner à la newsletter ? 👍🏻
+     <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter"> 
+  </label> 
+   <br>
+        <p style="color:red;" id="txt_erreur"></p>
+
+        <button input id="get" value="Récupérer les valeurs" class="buttonsubmit" type="submit"> Continuer et procéder au paiement </button>
+
+        <img class="imgPaie" src="paie.png">  
+</form>
+  
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- <script type="text/javascript" src="api.js"></script> -->
+<script type="text/javascript" src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</body>
+</html>
